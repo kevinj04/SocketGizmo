@@ -125,6 +125,9 @@
 		0A2D96AC151CE6B100BCD796 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D96AB151CE6B100BCD796 /* RootViewController.m */; };
 		0A2D96AF151CE6B100BCD796 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D96AE151CE6B100BCD796 /* HelloWorldLayer.m */; };
 		0A2D96B8151CE77800BCD796 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D96B7151CE77800BCD796 /* SocketManager.m */; };
+		0A9ABF1F152CCC430013F73F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2D954E151CE6AE00BCD796 /* Foundation.framework */; };
+		0A9ABF25152CCC430013F73F /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9ABF24152CCC430013F73F /* SocketManager.m */; };
+		0A9ABF2A152CCC5C0013F73F /* SocketManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2D96B6151CE77700BCD796 /* SocketManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -369,6 +372,10 @@
 		0A2D96B0151CE6B100BCD796 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		0A2D96B6151CE77700BCD796 /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
 		0A2D96B7151CE77800BCD796 /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
+		0A9ABF1E152CCC430013F73F /* libSocketManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSocketManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A9ABF22152CCC430013F73F /* SocketManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocketManager-Prefix.pch"; sourceTree = "<group>"; };
+		0A9ABF23152CCC430013F73F /* SocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		0A9ABF24152CCC430013F73F /* SocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +394,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A9ABF1B152CCC430013F73F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9ABF1F152CCC430013F73F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -394,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				0A2D9552151CE6AE00BCD796 /* SocketGizmo */,
+				0A9ABF20152CCC430013F73F /* SocketManager */,
 				0A2D9541151CE6AD00BCD796 /* Frameworks */,
 				0A2D953F151CE6AD00BCD796 /* Products */,
 			);
@@ -403,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				0A2D953E151CE6AD00BCD796 /* SocketGizmo.app */,
+				0A9ABF1E152CCC430013F73F /* libSocketManager.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -773,7 +790,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0A9ABF20152CCC430013F73F /* SocketManager */ = {
+			isa = PBXGroup;
+			children = (
+				0A9ABF23152CCC430013F73F /* SocketManager.h */,
+				0A9ABF24152CCC430013F73F /* SocketManager.m */,
+				0A9ABF21152CCC430013F73F /* Supporting Files */,
+			);
+			path = SocketManager;
+			sourceTree = "<group>";
+		};
+		0A9ABF21152CCC430013F73F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A9ABF22152CCC430013F73F /* SocketManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A9ABF1C152CCC430013F73F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9ABF2A152CCC5C0013F73F /* SocketManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0A2D953D151CE6AD00BCD796 /* SocketGizmo */ = {
@@ -792,6 +838,23 @@
 			productName = SocketGizmo;
 			productReference = 0A2D953E151CE6AD00BCD796 /* SocketGizmo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0A9ABF1D152CCC430013F73F /* SocketManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A9ABF28152CCC430013F73F /* Build configuration list for PBXNativeTarget "SocketManager" */;
+			buildPhases = (
+				0A9ABF1A152CCC430013F73F /* Sources */,
+				0A9ABF1B152CCC430013F73F /* Frameworks */,
+				0A9ABF1C152CCC430013F73F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocketManager;
+			productName = SocketManager;
+			productReference = 0A9ABF1E152CCC430013F73F /* libSocketManager.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -814,6 +877,7 @@
 			projectRoot = "";
 			targets = (
 				0A2D953D151CE6AD00BCD796 /* SocketGizmo */,
+				0A9ABF1D152CCC430013F73F /* SocketManager */,
 			);
 		};
 /* End PBXProject section */
@@ -946,6 +1010,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A9ABF1A152CCC430013F73F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9ABF25152CCC430013F73F /* SocketManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -1019,6 +1091,44 @@
 			};
 			name = Release;
 		};
+		0A9ABF26152CCC430013F73F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/SocketManager.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocketManager/SocketManager-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0A9ABF27152CCC430013F73F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/SocketManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocketManager/SocketManager-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1039,6 +1149,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		0A9ABF28152CCC430013F73F /* Build configuration list for PBXNativeTarget "SocketManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A9ABF26152CCC430013F73F /* Debug */,
+				0A9ABF27152CCC430013F73F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
