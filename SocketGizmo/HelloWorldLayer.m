@@ -46,8 +46,19 @@
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
+        
+        manager = [[SocketManager alloc] init];
+        [manager setServer:@"130.91.169.32"];
+        [manager setPort:23];
+        
+        listener = [[TestListener alloc] init];
+
 	}
 	return self;
+}
+
+- (void) onEnterTransitionDidFinish {
+    [manager connectToServer];
 }
 
 // on "dealloc" you need to release all your retained objects
@@ -56,6 +67,9 @@
 	// in case you have something to dealloc, do it in this method
 	// in this particular example nothing needs to be released.
 	// cocos2d will automatically release all the children (Label)
+    
+    [manager release];
+    [listener release];
 	
 	// don't forget to call "super dealloc"
 	[super dealloc];
